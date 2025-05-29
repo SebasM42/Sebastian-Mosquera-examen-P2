@@ -10,7 +10,7 @@ public class Main {
 
         int opcion;
         do {
-            System.out.println("\n--- Menú ---");
+            System.out.println("\n------------ Menu --------------");
             System.out.println("1 Depositar");
             System.out.println("2 Retirar");
             System.out.println("3 Ver saldo");
@@ -33,7 +33,7 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.printf("El saldo actual es: %.2f\n", cuenta.getSaldo());
+                    System.out.printf("El saldo actual es: %.2f\n", cuenta.imprimir());
                     break;
                 case 4:
                     System.out.println("Saliendo...");

@@ -19,7 +19,7 @@ public class SMCuenta {
         return false;
     }
 
-    public double getSaldo() {
+    public double imprimir() {
 
         return saldo;
     }
