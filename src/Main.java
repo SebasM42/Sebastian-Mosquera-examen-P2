@@ -5,16 +5,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese un monto inicial: ");
+
         double saldoInicial = scanner.nextDouble();
         SMCuentaAhorro cuenta = new SMCuentaAhorro(saldoInicial);
 
         int opcion;
         do {
-            System.out.println("\n------------ Menu --------------");
-            System.out.println("1 Depositar");
-            System.out.println("2 Retirar");
-            System.out.println("3 Ver saldo");
-            System.out.println("4 Salir");
+            System.out.println("\n *-*-*-*-*-*-* Menu *-*-*-*-*-*-*");
+            System.out.println("1 - Depositar");
+            System.out.println("2 - Retirar");
+            System.out.println("3 - Ver saldo");
+            System.out.println("4 - Salir");
             opcion = scanner.nextInt();
 
             switch (opcion) {

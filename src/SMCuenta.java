@@ -1,26 +1,13 @@
 public class SMCuenta {
     protected double saldo;
+    protected int numeroDepositos;
+    protected int numeroRetiros;
+    protected double tasaAnual;
 
     public SMCuenta(double saldoInicial) {
         this.saldo = saldoInicial;
-    }
-
-    public void depositar(double monto) {
-        if (monto > 0) {
-            saldo += monto;
-        }
-    }
-
-    public boolean retirar(double monto) {
-        if (monto > 0 && monto <= saldo) {
-            saldo -= monto;
-            return true;
-        }
-        return false;
-    }
-
-    public double imprimir() {
-
-        return saldo;
+        this.numeroDepositos = 0;
+        this.numeroRetiros = 0;
+        this.tasaAnual = 0.0;
     }
 }
