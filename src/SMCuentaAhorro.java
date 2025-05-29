@@ -1,31 +1,23 @@
 public class SMCuentaAhorro extends SMCuenta {
     private boolean activa;
 
-    public SMCuentaAhorro(double saldoInicial) {
+    public SMCuentaAhorro(double saldoInicial, float tasa) {
         super(saldoInicial);
+        this.tasaAnual = tasa;
         this.activa = saldoInicial > 0;
     }
 
-
-    public void cuentaAhorros(float saldo, float tasa) {
-        this.saldo = saldo;
-        this.tasaAnual = tasa;
-        this.activa = saldo > 0;
-    }
-
-
-    public void depositar(float numeroDepositos) {
-        if (numeroDepositos > 0) {
-            this.saldo += numeroDepositos;
+    public void depositar(float monto) {
+        if (monto > 0) {
+            this.saldo += monto;
             this.numeroDepositos++;
             this.activa = this.saldo > 0;
         }
     }
 
-
-    public void retirar(float numeroRetiros) {
-        if (numeroRetiros > 0 && numeroRetiros <= this.saldo) {
-            this.saldo -= numeroRetiros;
+    public void retirar(float monto) {
+        if (monto > 0 && monto <= this.saldo) {
+            this.saldo -= monto;
             this.numeroRetiros++;
             this.activa = this.saldo > 0;
         }

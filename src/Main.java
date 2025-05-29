@@ -6,7 +6,9 @@ public class Main {
 
         System.out.print("Ingrese un monto inicial: ");
         double saldoInicial = scanner.nextDouble();
-        SMCuentaAhorro cuenta = new SMCuentaAhorro(saldoInicial);
+        System.out.print("Ingrese la tasa anual: ");
+        float tasa = scanner.nextFloat();
+        SMCuentaAhorro cuenta = new SMCuentaAhorro(saldoInicial, tasa);
 
         int opcion;
         do {
@@ -27,12 +29,8 @@ public class Main {
                 case 2:
                     System.out.print("Ingrese el monto a retirar: ");
                     float retiro = scanner.nextFloat();
-                    if (retiro > 0 && retiro <= cuenta.saldo) {
-                        cuenta.retirar(retiro);
-                        System.out.println("Retiro realizado.");
-                    } else {
-                        System.out.println("Monto inválido o saldo insuficiente.");
-                    }
+                    cuenta.retirar(retiro);
+                    System.out.println("Operación realizada.");
                     break;
                 case 3:
                     System.out.print(cuenta.imprimir());
