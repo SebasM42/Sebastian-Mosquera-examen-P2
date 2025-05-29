@@ -20,13 +20,15 @@ public class Main {
             switch (opcion) {
                 case 1:
                     System.out.print("Ingrese el monto a depositar: ");
-                    double deposito = scanner.nextDouble();
+                    float deposito = scanner.nextFloat();
                     cuenta.depositar(deposito);
+                    System.out.println("Depósito realizado.");
                     break;
                 case 2:
                     System.out.print("Ingrese el monto a retirar: ");
-                    double retiro = scanner.nextDouble();
-                    if (cuenta.retirar(retiro)) {
+                    float retiro = scanner.nextFloat();
+                    if (retiro > 0 && retiro <= cuenta.saldo) {
+                        cuenta.retirar(retiro);
                         System.out.println("Retiro realizado.");
                     } else {
                         System.out.println("Monto inválido o saldo insuficiente.");
