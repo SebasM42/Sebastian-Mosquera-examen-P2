@@ -3,7 +3,6 @@ public class SMCuentaAhorro extends SMCuenta {
 
     public SMCuentaAhorro(double saldoInicial, float tasa) {
         super(saldoInicial);
-        this.tasaAnual = tasa;
         this.activa = saldoInicial > 0;
     }
 
