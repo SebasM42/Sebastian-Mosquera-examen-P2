@@ -22,7 +22,6 @@ public class Main {
                     System.out.print("Ingrese el monto a depositar: ");
                     double deposito = scanner.nextDouble();
                     cuenta.depositar(deposito);
-                    System.out.println("Depósito realizado.");
                     break;
                 case 2:
                     System.out.print("Ingrese el monto a retirar: ");
