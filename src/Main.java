@@ -5,7 +5,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese un monto inicial: ");
-
         double saldoInicial = scanner.nextDouble();
         SMCuentaAhorro cuenta = new SMCuentaAhorro(saldoInicial);
 
@@ -34,7 +33,7 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.printf("El saldo actual es: %.2f\n", cuenta.imprimir());
+                    System.out.print(cuenta.imprimir());
                     break;
                 case 4:
                     System.out.println("Saliendo...");
